@@ -3,7 +3,7 @@ import "./Income.css";
 import { formatMDY } from "../../helpers/formatDate";
 import { Link } from "react-router-dom";
 
-export const IncomeCard = ({ index, income, handleEditIncome, handleDeleteIncome }) => {
+export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
     if (index === 0) {
       return (
         <>

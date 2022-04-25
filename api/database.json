@@ -24,7 +24,8 @@
           "id": 1,
           "userId": 1,
           "budgetId": 1,
-          "description": "ChantLLC",
+          "name":"ChantLLC",
+          "description": "fixed income",
           "amount": "1000",
           "timestamp": 1649946953650,
           "eventDate": "2022-04-15"
@@ -33,7 +34,8 @@
             "id": 2,
             "userId": 1,
             "budgetId": 1,
-            "description": "DreamTimeLLC",
+            "name": "DreamTimeLLC",
+            "description": "fixed income",
             "amount": "100",
             "timestamp": 1650307578629,
             "eventDate": "2022-04-15"
