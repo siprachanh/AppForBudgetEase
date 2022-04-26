@@ -12,13 +12,13 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
             <h3>Income Name: <span className="card-incomename">
             {income.name}
           </span></h3>
-            <h6> Budget: {income.budgetid} </h6>
+            <h6> Budget: {income.budgetId} </h6>
               <h6>
                 {" "}
                 Income Description:{" "}
                 <span className="card-incomedescription">{income.description}</span>
               </h6>
-              <h6> Income Date: {income.incomeDate}</h6>
+              <h6> Income Date: {income.eventDate}</h6>
               <h6>
                 <span className="incomecreated-date">{`Posted: ${formatMDY(
                   income.timestamp
@@ -41,7 +41,7 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                 type="button"
                 onClick={() => handleDeleteIncome(income.id)}
               >
-                Delete Income
+                Delete 
               </button>
             </section>
           </div>
@@ -57,13 +57,13 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                 Income Name:{" "}
                 <span className="card-incomename">{income.name}</span>
               </h3>
-              <h6> Budget: {income.budgetid} </h6>
+              <h6> Budget: {income.budgetId} </h6>
               <h6>
                 {" "}
                 Income Description:{" "}
                 <span className="card-incomedescription">{income.description}</span>
               </h6>
-              <h6> Income Date: {income.incomeDate}</h6>
+              <h6> Income Date: {income.eventDate}</h6>
               <h6>
                 <span className="incomecreated-date">{`Posted: ${formatMDY(
                   income.timestamp
@@ -86,7 +86,7 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                 type="button"
                 onClick={() => handleDeleteIncome(income.id)}
               >
-                Delete Income
+                Delete 
               </button>
             </section>
           </div>

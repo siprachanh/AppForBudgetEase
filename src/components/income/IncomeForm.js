@@ -12,7 +12,7 @@ export const IncomeForm = () => {
         description: "", 
         amount: "", 
         timestamp: 0, 
-        eventDate: "" 
+        eventDate: Date.now(),
       });
     //empty object
     const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +33,10 @@ export const IncomeForm = () => {
     };
 
     const handleIncomeAmountChange = (e) => {
+        newIncome.amount = e.target.value;
+        setIncome(newIncome);
+      };
+      const handleIncomeEventDateChange = (e) => {
         newIncome.amount = e.target.value;
         setIncome(newIncome);
       };
@@ -103,6 +107,21 @@ export const IncomeForm = () => {
               className="form-control"
               placeholder="Enter Income amount"
               value={income.amount}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="eventDate"> Income Event Date:</label>
+            <input
+              type="text"
+              id="eventDate"
+              onChange={handleIncomeEventDateChange}
+              required
+              autoFocus
+              className="form-control"
+              placeholder="Enter event date"
+              value={income.eventDate}
             />
           </div>
         </fieldset>
