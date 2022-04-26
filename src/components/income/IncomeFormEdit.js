@@ -148,7 +148,9 @@ export const IncomeFormEdit = () => {
           </div>
         </fieldset>
         <button >Close</button>
-        <button onClick={UpdateIncomeButtonAction}>Save Updated Income</button>
+        <button 
+        disabled={isLoading} 
+        type="button" onClick={UpdateIncomeButtonAction}>Save Updated Income</button>
         </form>
     </>
       )}

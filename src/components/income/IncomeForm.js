@@ -43,7 +43,7 @@ export const IncomeForm = () => {
       
       const handleClickSaveIncome = (e) => {
         e.preventDefault(); //prevents browser from submitting form until ready
-        addIncome(e).then(() => navigate("/income"));
+        addIncome(newIncome).then(() => navigate("/income"));
       };
 
       return (
