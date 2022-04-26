@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Fraggle Rock",
+      "email": "fraggle@rock.com",
+      "isParent": true
+    },
+    {
+      "id": 2,
+      "name": "Miss Piggy",
+      "email": "miss@piggy.com",
+      "isParent": false
+    },
+    {
+      "id": 3,
+      "name": "Cookie Munster",
+      "email": "cookie@munster.com",
+      "isParent": false
+    }
+  ],
+  "income": [
+    {
+      "id": 1,
+      "userId": 1,
+      "budgetId": 1,
+      "name": "ChantLLC",
+      "description": "fixed income",
+      "amount": "1000",
+      "timestamp": 1649946953650,
+      "eventDate": "2022-04-15"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "budgetId": 1,
+      "name": "DreamTimeLLC",
+      "description": "fixed income",
+      "amount": "100",
+      "timestamp": 1650307578629,
+      "eventDate": "2022-04-15"
+    }
+  ],
+  "expense": [
+    {
+      "id": 1,
+      "userId": 1,
+      "budgetId": 1,
+      "description": "Kroger",
+      "amount": "150",
+      "isPaid": true,
+      "timestamp": 1649946953800,
+      "eventDate": "2022-04-25"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "budgetId": 1,
+      "description": "ABC Salon",
+      "amount": "100",
+      "isPaid": false,
+      "timestamp": 1650307578000,
+      "eventDate": "2022-04-30"
+    }
+  ],
+  "budget": [
+    {
+      "id": 1,
+      "userId": 1,
+      "balanceId": 1,
+      "description": "Budget1",
+      "amount": "1000",
+      "timestamp": 1649946953800,
+      "eventDate": "2022-04-25"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "balanceId": 1,
+      "description": "Budget2",
+      "amount": "100",
+      "timestamp": 1650307578100,
+      "eventDate": "2022-04-30"
+    }
+  ],
+  "balance": [
+    {
+      "id": 1,
+      "userId": 1,
+      "description": "Your Income Balance",
+      "amount": "1000",
+      "timestamp": 1649946953800,
+      "eventDate": "2022-04-25"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "description": "Your Expense Balance",
+      "amount": "1000",
+      "timestamp": 1649946953850,
+      "eventDate": "2022-04-25"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "description": "Your Total Balance",
+      "amount": "2000",
+      "timestamp": 1649946953900,
+      "eventDate": "2022-04-25"
+    }
+  ]
+}

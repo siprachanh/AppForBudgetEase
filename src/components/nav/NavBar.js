@@ -11,17 +11,17 @@ export const NavBar = (props) => {
 
       <ul className="nav nav-pills nav-fill">
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/dashboard">
             Dashboard
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/friends">
+          <Link className="nav-link" to="/income">
             Income 
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/messages">
+          <Link className="nav-link" to="/expense">
            Expense
           </Link>
        
