@@ -7,7 +7,7 @@ export const NavBar = (props) => {
   return (
     <nav className="navbar text-white flex-md-nowrap p-0 shadow">
 
-      <img className="logo" src="../images/coinJar.jpg" alt="logo"/>
+      <img className="logo" src="../images/coins.jpg" alt="logo"/>
 
       <ul className="nav nav-pills nav-fill">
         <li className="nav-item">

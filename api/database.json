@@ -33,12 +33,15 @@
     {
       "id": 2,
       "userId": 1,
-      "budgetId": 1,
+      "budgetId": 2,
       "name": "DreamTimeLLC",
       "description": "fixed income",
       "amount": "100",
       "timestamp": 1650307578629,
       "eventDate": "2022-04-15"
+    },
+    {
+      "id": 4
     }
   ],
   "expense": [
@@ -61,6 +64,26 @@
       "isPaid": false,
       "timestamp": 1650307578000,
       "eventDate": "2022-04-30"
+    },
+    {
+      "budgetId": 0,
+      "name": "Pet Med LLC",
+      "description": "Puppy's shots",
+      "amount": "75",
+      "isPaid": "",
+      "timestamp": "",
+      "eventDate": "2022-5-07",
+      "id": 3
+    },
+    {
+      "budgetId": 0,
+      "name": "Xfinity Bill",
+      "description": "fixed ",
+      "amount": "100",
+      "isPaid": "",
+      "timestamp": "",
+      "eventDate": "2022-5-07",
+      "id": 4
     }
   ],
   "budget": [
