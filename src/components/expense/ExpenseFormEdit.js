@@ -112,6 +112,12 @@ useEffect(() => {
               value={expense.eventDate}
             />
             <label htmlFor="due date">Expense Due Date</label>
+					<input 
+              type="text" id="expense posted"
+                     onChange={handleFieldChange} 
+                    required autoFocus className="form-control" 
+                    value={expense.timestamp} />
+               <label htmlFor="expense posted">Expense Date Posted:</label>
           </div>
           <div className="alignRight">
             <button

@@ -17,6 +17,11 @@
       "name": "Cookie Munster",
       "email": "cookie@munster.com",
       "isParent": false
+    },
+    {
+      "email": "kevin@bakin.com",
+      "name": "kevin bakin",
+      "id": 4
     }
   ],
   "income": [
@@ -39,9 +44,6 @@
       "amount": "100",
       "timestamp": 1650307578629,
       "eventDate": "2022-04-15"
-    },
-    {
-      "id": 4
     }
   ],
   "expense": [
@@ -84,6 +86,69 @@
       "timestamp": "",
       "eventDate": "2022-5-07",
       "id": 4
+    },
+    {
+      "budgetId": 0,
+      "name": "Mapco",
+      "description": "gas",
+      "amount": "35",
+      "isPaid": "",
+      "timestamp": "",
+      "eventDate": "2022-4-28",
+      "id": 5
+    },
+    {
+      "budgetId": 0,
+      "name": "ABCLLC",
+      "description": "tools ",
+      "amount": "75",
+      "isPaid": "",
+      "timestamp": "",
+      "eventDate": "2022-04-30",
+      "id": 6
+    },
+    {
+      "budgetId": 0,
+      "name": "ABCLLC",
+      "description": "tools supplies",
+      "amount": "58",
+      "isPaid": "",
+      "timestamp": "",
+      "eventDate": "2022-04-29",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "budgetId": 0,
+      "name": "Sprouts",
+      "description": "groceries",
+      "amount": "11",
+      "isPaid": "",
+      "timestamp": 1651090432567,
+      "eventDate": "2022-28-04",
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "budgetId": 0,
+      "name": "Kroger",
+      "description": "groceries",
+      "amount": "76",
+      "isPaid": "",
+      "timestamp": 1651090521242,
+      "eventDate": "2022-4-27",
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "budgetId": 0,
+      "name": "CapitolWon",
+      "description": "credit card",
+      "amount": "91",
+      "isPaid": "",
+      "timestamp": 1651090627573,
+      "eventDate": "2022-04-28",
+      "id": 11
     }
   ],
   "budget": [

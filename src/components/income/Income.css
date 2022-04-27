@@ -10,6 +10,25 @@
       margin: 1em;
       padding: 1em;
       border: 1px solid goldenrod;
+
+  }
+
+  .first-card {
+    font-weight: bolder;
+    text-align: left;
+    justify-content: space-evenly;
+    flex-basis: 85%;
+    margin: 1.5em;
+    padding: 1.5em;
+    border: .15rem solid #09154048;
+    background: rgb(38, 196, 133);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 82%, rgba(180, 197, 228, 1) 100%);
+    border-radius: .6rem;
+    box-shadow: .4rem .4rem .5rem rgba(0, 0, 0, 1.5);
+  }
+  
+  #first-event-font {
+    font-weight: bolder;
   }
   .card {
     /* Add shadows to create the "card" effect */
@@ -50,11 +69,11 @@
     padding: .5em;
     border-radius: 2px;
     margin: .1em;
-    width: 100%;
+    width: 50%;
 
   }
   .card button {
-    background-color: cornflowerblue;
+    background-color: rgb(90, 192, 81);
     border-radius: 1%;
     color: cornsilk;
     text-align: center;
@@ -64,7 +83,7 @@
     padding: .5em;
     border-radius: 2px;
     margin: .1em;
-    width: 100%;
+    width: 50%;
   }
   
   .card button:hover {

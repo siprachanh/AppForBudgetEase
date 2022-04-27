@@ -50,6 +50,7 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
     } else {
       return (
         <>
+         <div className="card">
           <div className="card-content" id={`income_${income.id}`}>
             <div>
               <h3>
@@ -63,6 +64,12 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                 Income Description:{" "}
                 <span className="card-incomedescription">{income.description}</span>
               </h6>
+              <h6>
+                {" "}
+                Income Amount:{" "}
+                <span className="card-incomeamount">{income.amount}</span>
+              </h6>
+              
               <h6> Income Date: {income.eventDate}</h6>
               <h6>
                 <span className="incomecreated-date">{`Posted: ${formatMDY(
@@ -89,6 +96,7 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                 Delete 
               </button>
             </section>
+          </div>
           </div>
         </>
       );
