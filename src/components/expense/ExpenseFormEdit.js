@@ -27,7 +27,7 @@ export const ExpenseFormEdit = () => {
 		if (event.target.id.includes("Id")) {
 			selectedVal = parseInt(selectedVal)
 		}
-		/* Animal is an object with properties.
+		/* 
 		Set the property to the new value
 		using object bracket notation. */
 		newExpense[event.target.id] = selectedVal
