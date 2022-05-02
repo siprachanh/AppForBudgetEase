@@ -8,13 +8,14 @@ export const ExpenseForm = () => {
 	// Define the initial state of the form inputs with useState
 
 	const [expense, setExpense] = useState({
+    userId: parseInt(sessionStorage.getItem("AppForBudgetEase_user")),
 	  budgetId: 0,
       name: "", 
       description: "", 
       amount: "", 
       isPaid: "", 
-      timestamp: "", 
-      eventDate: ""
+      timestamp: Date.now(), 
+      eventDate: "",
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
@@ -73,19 +74,31 @@ const handleClickSaveExpense = (event) => {
             <fieldset>
 				<div className="form-group">
                 <label htmlFor="amount">Expense Amount:</label>
-					<input type="text" id="amount" onChange={handleControlledInputChange} 
+					<input type="number" id="amount" onChange={handleControlledInputChange} 
                     required autoFocus className="form-control" 
                     placeholder="Expense amount" value={expense.amount} />
 				</div>
 			</fieldset>
             <fieldset>
 				<div className="form-group">
-                <label htmlFor="eventDate">Expense Due Date:</label>
-					<input type="text" id="eventDate" onChange={handleControlledInputChange} 
+                <label htmlFor="dateDue">Expense Due Date:</label>
+					<input placeholder="YY-MM-DD" 
+                    type="date" id="eventDate"
+                     onChange={handleControlledInputChange} 
                     required autoFocus className="form-control" 
                     placeholder="Expense due date" value={expense.eventDate} />
 				</div>
 			</fieldset>
+            {/* <fieldset>
+				<div className="form-group">
+                <label htmlFor="eventDate">Expense Date Posted:</label>
+					<input placeholder="YY-MM-DD" 
+                    type="text" id="eventDate"
+                     onChange={handleControlledInputChange} 
+                    required autoFocus className="form-control" 
+                    placeholder="Expense date posted" value={expense.timestamp} />
+				</div>
+			</fieldset> */}
 			<button type="button" className="btn btn-primary"
 				onClick={handleClickSaveExpense}>
 				Save Expense

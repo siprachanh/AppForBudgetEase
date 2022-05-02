@@ -6,7 +6,7 @@ import "./Income.css";
 export const IncomeForm = () => {
     const [income, setIncome] = useState({ 
         id: 0,
-        userId: 0, 
+        userId: parseInt(sessionStorage.getItem("AppForBudgetEase_user")), 
         budgetId: 0, 
         name: "", 
         description: "", 

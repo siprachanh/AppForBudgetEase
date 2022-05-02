@@ -7,12 +7,12 @@ export const NavBar = (props) => {
   return (
     <nav className="navbar text-white flex-md-nowrap p-0 shadow">
 
-      <img className="logo" src="../images/coins.jpg" alt="logo"/>
+      <img className="logo" src="../images/financialfree.jpg" alt="logo"/>
 
       <ul className="nav nav-pills nav-fill">
         <li className="nav-item">
-          <Link className="nav-link" to="/dashboard">
-            Dashboard
+          <Link className="nav-link" to="/budget">
+            Budget 
           </Link>
         </li>
         <li className="nav-item">
@@ -24,7 +24,11 @@ export const NavBar = (props) => {
           <Link className="nav-link" to="/expense">
            Expense
           </Link>
-       
+          </li>
+          <li className="nav-item">
+          <Link className="nav-link" to="/login">
+           Logout
+          </Link>
         </li>
       </ul>
     </nav>

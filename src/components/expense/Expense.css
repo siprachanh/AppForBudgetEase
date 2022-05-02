@@ -1,37 +1,57 @@
-.expenses {
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Shippori+Antique&display=swap');
+
+.expense {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-.expense {
+    font-family: 'Fira Sans', sans-serif;
       flex-basis: 28%;
       margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
+      padding: .6 em;
+      /* border: 1px solid goldenrod; */
   }
 
+  .first-card {
+    font-weight: 800;
+    font-size: 20px;
+    text-align: left;
+    justify-content: space-evenly;
+    flex-basis: 85%;
+    margin: 3 em;
+    padding: 3 em;
+    border: .3 rem solid #09154048;
+    background: rgb(38, 196, 133);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 82%, rgba(180, 197, 228, 1) 100%);
+    border-radius: 1 rem;
+    box-shadow: .4rem .4rem .5rem rgba(0, 0, 0, 3);
+    font-family: 'Fira Sans', sans-serif; 
+  }
+  
+  #first-expense-font {
+    font-weight: 800;
+    font-size: larger;
+  }
   
   
   .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,1.0);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    background: aliceblue;
+    background: rgb(140, 161, 179);
     margin-bottom: 2em;
     flex: 0 1 24%;
   }
   
   .card-content {
-    padding: .5em;
+    padding: .5 em;
   }
   
   .card-content h3 {
     margin-top: 0;
     margin-bottom: .5em;
     font-weight: bold;
-    color: rgb(43, 112, 241);
+    color: rgb(118, 121, 128);
   }
   
   .card-content p {
@@ -44,19 +64,19 @@
   }
   
   .card button {
-    background-color: cornflowerblue;
-    border: none;
-    color: cornsilk;
+    background-color: rgb(90, 192, 81);
+    border-radius: 1%;
+    color: rgb(66, 66, 64);
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    padding: .5em;
+    padding: 1.0em;
     border-radius: 2px;
-    margin: .1em;
-    width: 100%;
+    margin: .2em;
+    width: 50%;
   }
   
   .card button:hover {
-    background-color: darkblue;
+    background-color: rgb(34, 95, 15);
   }

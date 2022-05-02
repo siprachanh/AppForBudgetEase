@@ -5,12 +5,12 @@ import './Expense.css';
 
 export const ExpenseFormEdit = () => {
     const [expense, setExpense] = useState({
-        budgetId: 0,
+        // budgetId: 0,
         name: "", 
         description: "", 
         amount: "", 
         isPaid: "", 
-        timestamp: "", 
+        // timestamp: Date.now(), 
         eventDate: ""
       });
   
@@ -47,15 +47,16 @@ export const ExpenseFormEdit = () => {
       const updateExistingExpense = evt => {
         evt.preventDefault()
         setIsLoading(true);
-
+//take set state and add in expense.prop value
         const editedExpense = {
             budgetId: expense.budgetId.name,
             name: expense.name, 
             description: expense.description, 
             amount: expense.amount, 
             isPaid: expense.isPaid, 
-            timestamp: 0, 
-            eventDate: Date.now(),
+            // timestamp: expense.timestamp, 
+            // eventDate: Date.now(),
+            id: expense.id,
         }
     //pass the edited object to the database
   updateExpense(editedExpense)
@@ -104,14 +105,20 @@ useEffect(() => {
             />
             <label htmlFor="amount">Expense Amount</label>
             <input
-              type="text"
+              type="date"
               required
               className="form-control"
               onChange={handleFieldChange}
               id="due date"
               value={expense.eventDate}
             />
-            <label htmlFor="due date">Expense Due Date</label>
+            <label htmlFor="duedate">Expense Due Date</label>
+					{/* <input 
+              type="date" id="date posted"
+                     onChange={handleFieldChange} 
+                    required autoFocus className="form-control" 
+                    value={expense.timestamp} />
+               <label htmlFor="expense posted">Expense Date Posted:</label> */}
           </div>
           <div className="alignRight">
             <button
