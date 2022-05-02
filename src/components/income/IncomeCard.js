@@ -30,13 +30,13 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                     <button> Details </button>
                 </Link>
               <Link to={`/income/${income.id}/edit`}>
-                <button class="btn" id="edit" type="button">
+                <button className="btn" id="edit" type="button">
                   Edit
                 </button>
               </Link>
   
               <button
-                class="btn"
+                className="btn"
                 id="delete"
                 type="button"
                 onClick={() => handleDeleteIncome(income.id)}
@@ -82,13 +82,13 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                     <button> Details </button>
                 </Link>
               <Link to={`/income/${income.id}/edit`}>
-                <button class="btn" id="edit" type="button">
+                <button className="btn" id="edit" type="button">
                   Edit
                 </button>
               </Link>
   
               <button
-                class="btn"
+                className="btn"
                 id="delete"
                 type="button"
                 onClick={() => handleDeleteIncome(income.id)}

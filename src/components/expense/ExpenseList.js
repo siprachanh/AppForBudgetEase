@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { ExpenseCard} from "./ExpenseCard";
+import "./Expense.css";
 import {getAllExpense, getExpenseById, deleteExpense} from "../../modules/ExpenseManager";
 import { useNavigate } from 'react-router-dom';
 

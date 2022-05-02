@@ -3,6 +3,7 @@ import "./Expense.css";
 import { formatMDY } from "../../helpers/formatDate";
 import {Link } from "react-router-dom"
 
+//Expense gets called by its parent
 export const ExpenseCard = ({index, expense, handleDeleteExpense}) => {
   const theDate = formatMDY(expense.timestamp);
   if (index === 0) { 

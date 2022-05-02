@@ -37,106 +37,65 @@
     },
     {
       "id": 2,
-      "userId": 1,
+      "userId": null,
       "budgetId": 2,
-      "name": "DreamTimeLLC",
+      "name": "",
+      "description": "",
+      "amount": "101",
+      "timestamp": 0,
+      "eventDate": 1651163391412
+    },
+    {
+      "id": 3,
+      "userId": null,
+      "budgetId": 0,
+      "name": "",
+      "description": "",
+      "amount": "251",
+      "timestamp": 0,
+      "eventDate": 1651163500154
+    },
+    {
+      "id": 4,
+      "userId": 0,
+      "budgetId": 0,
+      "name": "ABCLLC",
       "description": "fixed income",
-      "amount": "100",
-      "timestamp": 1650307578629,
-      "eventDate": "2022-04-15"
+      "amount": "250",
+      "timestamp": 0,
+      "eventDate": 1651163685086
+    },
+    {
+      "id": 5,
+      "userId": 0,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "image royalties",
+      "amount": "2",
+      "timestamp": 0,
+      "eventDate": 1651164383313
+    },
+    {
+      "id": 6,
+      "userId": 0,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "image royalties",
+      "amount": "3",
+      "timestamp": 0,
+      "eventDate": 1651164523897
     }
   ],
   "expense": [
-    {
-      "id": 1,
-      "userId": 1,
-      "budgetId": 1,
-      "description": "Kroger",
-      "amount": "150",
-      "isPaid": true,
-      "timestamp": 1649946953800,
-      "eventDate": "2022-04-25"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "budgetId": 1,
-      "description": "ABC Salon",
-      "amount": "100",
-      "isPaid": false,
-      "timestamp": 1650307578000,
-      "eventDate": "2022-04-30"
-    },
-    {
-      "budgetId": 0,
-      "name": "Pet Med LLC",
-      "description": "Puppy's shots",
-      "amount": "75",
-      "isPaid": "",
-      "timestamp": "",
-      "eventDate": "2022-5-07",
-      "id": 3
-    },
-    {
-      "budgetId": 0,
-      "name": "Xfinity Bill",
-      "description": "fixed ",
-      "amount": "100",
-      "isPaid": "",
-      "timestamp": "",
-      "eventDate": "2022-5-07",
-      "id": 4
-    },
-    {
-      "budgetId": 0,
-      "name": "Mapco",
-      "description": "gas",
-      "amount": "35",
-      "isPaid": "",
-      "timestamp": "",
-      "eventDate": "2022-4-28",
-      "id": 5
-    },
-    {
-      "budgetId": 0,
-      "name": "ABCLLC",
-      "description": "tools ",
-      "amount": "75",
-      "isPaid": "",
-      "timestamp": "",
-      "eventDate": "2022-04-30",
-      "id": 6
-    },
-    {
-      "budgetId": 0,
-      "name": "ABCLLC",
-      "description": "tools supplies",
-      "amount": "58",
-      "isPaid": "",
-      "timestamp": "",
-      "eventDate": "2022-04-29",
-      "id": 7
-    },
-    {
-      "userId": 4,
-      "budgetId": 0,
-      "name": "Sprouts",
-      "description": "groceries",
-      "amount": "11",
-      "isPaid": "",
-      "timestamp": 1651090432567,
-      "eventDate": "2022-28-04",
-      "id": 9
-    },
     {
       "userId": 4,
       "budgetId": 0,
       "name": "Kroger",
       "description": "groceries",
-      "amount": "76",
+      "amount": "80",
       "isPaid": "",
-      "timestamp": 1651090521242,
-      "eventDate": "2022-4-27",
+      "timestamp": 0,
+      "eventDate": 1651169243058,
       "id": 10
     },
     {
@@ -144,11 +103,45 @@
       "budgetId": 0,
       "name": "CapitolWon",
       "description": "credit card",
-      "amount": "91",
+      "amount": "93",
       "isPaid": "",
-      "timestamp": 1651090627573,
-      "eventDate": "2022-04-28",
+      "timestamp": 0,
+      "eventDate": 1651162283015,
       "id": 11
+    },
+    {
+      "userId": 4,
+      "budgetId": 0,
+      "name": "NES",
+      "description": "water",
+      "amount": "50",
+      "isPaid": "",
+      "timestamp": 1651092730760,
+      "eventDate": "2022-5-08",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "Pet Med LLC",
+      "description": "groom2",
+      "amount": "37",
+      "isPaid": "",
+      "timestamp": 1651170751977,
+      "eventDate": "",
+      "date": "2022-04-30",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "Pet Med LLC",
+      "description": "groom3",
+      "amount": "55",
+      "isPaid": "",
+      "timestamp": 1651171132386,
+      "eventDate": "2022-04-30",
+      "id": 14
     }
   ],
   "budget": [

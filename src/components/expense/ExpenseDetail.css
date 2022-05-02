@@ -1,9 +1,9 @@
 #root > .card {
     max-width: 400px;
-    margin: 10px auto;
+    margin: 40px auto;
   }
 
 button:disabled,
 button:disabled:hover {
-  background-color: lightgray;
+  background-color: rgb(85, 83, 83);
 }

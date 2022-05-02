@@ -8,13 +8,12 @@ export const IncomeFormEdit = () => {
    
     const [income, setIncome] = useState ({
         id: 0,
-        userId: 0,
         budgetId: 0, 
         name: "", 
         description: "", 
         amount: "", 
-        timestamp: 0, 
-        eventDate: Date.now(), 
+        timestamp: "", 
+        eventDate: "" 
       });
 
       const navigate = useNavigate()
@@ -32,14 +31,13 @@ export const IncomeFormEdit = () => {
           setIsLoading(true);
 
           const editedIncome = {
-              id: incomeId, 
-              userId: parseInt(sessionStorage.getItem("userId")), 
               budgetId: income.budgetId.name,
               name: income.name,
               description: income.description,
               amount: income.amount,
               timestamp: income.timestamp,
               eventDate: Date.now(),
+              id: income.id,
           };
           //pass editedIncome object to the db
         updateIncome(editedIncome)

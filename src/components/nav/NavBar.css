@@ -1,17 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Shippori+Antique&display=swap');
+
 .logo {
     height: 100px;
+    padding: 2;
+    align-content: left;
    
 }
 
+nav {
+    background-color: #999c9e;
+}
 .navbar {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
+    flex-wrap: wrap;
+    justify-content: align left;
 }
+
+.nav-link {
+    display: block;
+    padding: 2 rem 1 rem;
+    color: #091540;
+    background-color: #0c0f0e;
+    border-radius: 15px;
+    border-color: #1c1f1d;
+    text-decoration: black;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Fira Sans', sans-serif; 
+}
+
 
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    border-radius: 50%;
+    align-content: left;
+    
 }
 
 .logout {

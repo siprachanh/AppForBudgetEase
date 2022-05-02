@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Shippori+Antique&display=swap');
+.budget {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Fira Sans', sans-serif; 
+  }
+  

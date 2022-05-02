@@ -74,22 +74,22 @@ const handleClickSaveExpense = (event) => {
             <fieldset>
 				<div className="form-group">
                 <label htmlFor="amount">Expense Amount:</label>
-					<input type="text" id="amount" onChange={handleControlledInputChange} 
+					<input type="number" id="amount" onChange={handleControlledInputChange} 
                     required autoFocus className="form-control" 
                     placeholder="Expense amount" value={expense.amount} />
 				</div>
 			</fieldset>
             <fieldset>
 				<div className="form-group">
-                <label htmlFor="eventDate">Expense Due Date:</label>
+                <label htmlFor="dateDue">Expense Due Date:</label>
 					<input placeholder="YY-MM-DD" 
-                    type="text" id="eventDate"
+                    type="date" id="eventDate"
                      onChange={handleControlledInputChange} 
                     required autoFocus className="form-control" 
                     placeholder="Expense due date" value={expense.eventDate} />
 				</div>
 			</fieldset>
-            <fieldset>
+            {/* <fieldset>
 				<div className="form-group">
                 <label htmlFor="eventDate">Expense Date Posted:</label>
 					<input placeholder="YY-MM-DD" 
@@ -98,7 +98,7 @@ const handleClickSaveExpense = (event) => {
                     required autoFocus className="form-control" 
                     placeholder="Expense date posted" value={expense.timestamp} />
 				</div>
-			</fieldset>
+			</fieldset> */}
 			<button type="button" className="btn btn-primary"
 				onClick={handleClickSaveExpense}>
 				Save Expense

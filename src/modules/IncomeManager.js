@@ -26,7 +26,7 @@ export const deleteIncome = (incomeId) => {
         }).then(result => result.json())    
 }
 
-export const updateIncome = (incomeId, editedIncome) => {
+export const updateIncome = (editedIncome) => {
     return fetch(`${remoteURL}/income/${editedIncome.id}`, {
       method: "PATCH",
       headers: {
