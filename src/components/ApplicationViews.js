@@ -12,8 +12,7 @@ import { ExpenseForm } from "./expense/ExpenseForm";
 import { ExpenseFormEdit } from "./expense/ExpenseFormEdit";
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import { Budget } from './budget/Budget';
-import { IncomeTotal } from "./income/IncomeTotal";
-import { ExpenseTotal } from "./expense/ExpenseTotal";
+
 
 
 
@@ -28,7 +27,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
       <Route path="/" element={<PrivateOutlet />} />
       <Route exact path="/login" element={<Login setAuthUser={setAuthUser} />} />
       <Route exact path="/register" element={<Register />} />    
-      <Route path="/budget" element={<Budget/>} /> 
+      <Route exact path="/budget" element={<Budget/>} /> 
 
      
       <Route path="/income" element={<IncomeList/>} /> 
@@ -43,7 +42,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
       <Route path="/expense/create" element={<ExpenseForm/>} /> 
 
       <Route path="/expense/:expenseId/edit" element={<ExpenseFormEdit/>} /> 
-      {/* <Route path="/expense/create" element={<ExpenseTotal/>} />  */}
+     
       </Routes>
  
   );

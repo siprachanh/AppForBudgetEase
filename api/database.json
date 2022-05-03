@@ -22,6 +22,11 @@
       "email": "kevin@bakin.com",
       "name": "kevin bakin",
       "id": 4
+    },
+    {
+      "email": "big@bird.com",
+      "name": "Big Bird",
+      "id": 5
     }
   ],
   "income": [
@@ -84,31 +89,29 @@
       "amount": "3",
       "timestamp": 0,
       "eventDate": 1651164523897
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "image royalties2",
+      "amount": "10",
+      "timestamp": 0,
+      "eventDate": 1651523507058
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "budgetId": "1",
+      "name": "DreamTimeLLC",
+      "description": "image royalties 3",
+      "amount": "10",
+      "timestamp": 0,
+      "eventDate": 1651588279697
     }
   ],
   "expense": [
-    {
-      "userId": 4,
-      "budgetId": 0,
-      "name": "Kroger",
-      "description": "groceries",
-      "amount": "80",
-      "isPaid": "",
-      "timestamp": 0,
-      "eventDate": 1651169243058,
-      "id": 10
-    },
-    {
-      "userId": 4,
-      "budgetId": 0,
-      "name": "CapitolWon",
-      "description": "credit card",
-      "amount": "93",
-      "isPaid": "",
-      "timestamp": 0,
-      "eventDate": 1651162283015,
-      "id": 11
-    },
     {
       "userId": 4,
       "budgetId": 0,
@@ -124,24 +127,45 @@
       "userId": 1,
       "budgetId": 0,
       "name": "Pet Med LLC",
-      "description": "groom2",
-      "amount": "37",
-      "isPaid": "",
-      "timestamp": 1651170751977,
-      "eventDate": "",
-      "date": "2022-04-30",
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "budgetId": 0,
-      "name": "Pet Med LLC",
       "description": "groom3",
       "amount": "55",
       "isPaid": "",
       "timestamp": 1651171132386,
       "eventDate": "2022-04-30",
       "id": 14
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "Xfinity Bill",
+      "description": "internet",
+      "amount": "75",
+      "isPaid": "",
+      "timestamp": 1651522210660,
+      "eventDate": "2022-05-30",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "CapitalWon",
+      "description": "credit card",
+      "amount": "250",
+      "isPaid": "",
+      "timestamp": 1651522951529,
+      "eventDate": "2022-05-30",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "Bank of Earth",
+      "description": "earth loan 1",
+      "amount": "115",
+      "isPaid": "",
+      "timestamp": 1651588132534,
+      "eventDate": "2022-05-30",
+      "id": 17
     }
   ],
   "budget": [

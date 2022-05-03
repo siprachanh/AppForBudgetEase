@@ -25,13 +25,13 @@ export const IncomeList = (handleEdit) => {
 
     return (
         <>
-        <h2 className="income-header"> This is My Income Page</h2>
+        <h1 className="income-header"> This is My Income Page</h1>
         <div>
             <Link to={`/income/create`}>
             <button type="button"
             className="btn"
             onClick={() => {navigate("/income/create")}}>
-           <h4 className="button"> [ Click Here to Add New Income ] </h4>
+           <h4 className="button"> Click Here to Add New Income  </h4>
             </button>
             </Link>
 
