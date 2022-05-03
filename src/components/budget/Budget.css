@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Shippori+Antique&display=swap');
-.budget {
+.section-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

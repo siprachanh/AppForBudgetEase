@@ -50,12 +50,13 @@ useEffect(()=> {
   
  return (
   <>
+  <section className="section-content">
   <h1>  My Income and Expense Total Page </h1>
      
-     <h2>This is my income total: $ {incomeTotal}  </h2>
+     <h2>This is my current income total: $ {incomeTotal}  </h2>
 
-     <h2> This is my expense total: $ {expenseTotal} </h2>
-   
+     <h2> This is my current expense total: $ {expenseTotal} </h2>
+     </section>
    </>
  ); 
 }
