@@ -43,9 +43,9 @@ const getTotalIncome = () => {
    }, []);
 
 
-useEffect(()=> {
-  getTotalIncome()
-}, []);
+  useEffect(()=> {
+    getTotalIncome()
+  }, []);
 
   
  return (

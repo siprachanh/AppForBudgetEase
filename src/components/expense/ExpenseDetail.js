@@ -48,7 +48,7 @@ export const ExpenseDetail = () => {
       <h3 className="expense__name">Name: {expense.name}</h3>
       <div className="expense_budgetId">{expense.budgetId?.name}</div>
       <div className="expense__description">Description: {expense.description}</div>
-      <div className="expense__amount">Amount: ${expense.amount}</div>
+      <div className="expense__amount">Amount:$ {expense.amount}</div>
       <div className="expense__isPaid">is Paid: {expense.isPaid?.name}</div>
       <button type="button" disabled={isLoading} onClick={handleDelete}>
           Remove

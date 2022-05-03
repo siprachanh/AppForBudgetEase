@@ -4,42 +4,49 @@ import { addIncome } from "../../modules/IncomeManager";
 import "./Income.css";
 
 export const IncomeForm = () => {
+  // state will contain both data as well as isLoading flag
+  // define the initial state of the form inputs with useState
+
     const [income, setIncome] = useState({ 
-        id: 0,
         userId: parseInt(sessionStorage.getItem("AppForBudgetEase_user")), 
         budgetId: 0, 
         name: "", 
         description: "", 
         amount: "", 
-        timestamp: 0, 
-        eventDate: Date.now(),
+        timestamp: Date.now(), 
+        eventDate: "",
       });
     //empty object
     const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
     const newIncome = { ...income};
+    // navi gives ability to change URL
     //constrolled component--what is in state
-    const handleIncomeNameChange = (e) => {
-        newIncome.name = e.target.value;
-        setIncome(newIncome);
+    const handleControlledInputChange = (e) => {
+        let selectedVal = e.target.value;
+        if (e.target.id.includes("Id")) {
+          selectedVal = parseInt(selectedVal)
+      }
+      newIncome[e.target.id] = selectedVal
+        setIncome(newIncome)
       };
-    const handleIncomeBudgetIdChange = (e) => {
-        newIncome.budgetId = e.target.value;
-        setIncome(newIncome);
-      };
-    const handleIncomeDescriptionChange = (e) => {
-      newIncome.description = e.target.value;
-      setIncome(newIncome);
-    };
+    // const handleIncomeBudgetIdChange = (e) => {
+    //     newIncome.budgetId = e.target.value;
+    //     setIncome(newIncome);
+    //   };
+    // const handleIncomeDescriptionChange = (e) => {
+    //   newIncome.description = e.target.value;
+    //   setIncome(newIncome);
+    // };
 
-    const handleIncomeAmountChange = (e) => {
-        newIncome.amount = e.target.value;
-        setIncome(newIncome);
-      };
-      const handleIncomeEventDateChange = (e) => {
-        newIncome.amount = e.target.value;
-        setIncome(newIncome);
-      };
+    // const handleIncomeAmountChange = (e) => {
+    //     newIncome.amount = e.target.value;
+    //     setIncome(newIncome);
+    //   };
+    //   const handleIncomeEventDateChange = (e) => {
+    //     newIncome.amount = e.target.value;
+    //     setIncome(newIncome);
+    //   };
       
       const handleClickSaveIncome = (e) => {
         e.preventDefault(); //prevents browser from submitting form until ready
@@ -49,14 +56,14 @@ export const IncomeForm = () => {
       return (
           <>
            <form className="incomeForm">
-        <h3 className="incomeForm__title">Create New Income Form</h3>
-        <fieldset>
-          <div className="form-group">
+        <h3 className="incomeForm__title">[ Create New Income Form ]</h3>
+        {/* <fieldset> */}
+          {/* <div className="form-group">
             <label htmlFor="BudgetId"> BudgetId:</label>
             <input
               type="text"
               id="budgetId"
-              onChange={handleIncomeBudgetIdChange}
+              onChange={handleControlledInputChange}
               required
               autoFocus
               className="form-control"
@@ -64,14 +71,14 @@ export const IncomeForm = () => {
               value={income.budgetId}
             />
           </div>
-        </fieldset>
+        </fieldset> */}
         <fieldset>
           <div className="form-group">
             <label htmlFor="name"> Income Name:</label>
             <input
               type="text"
               id="name"
-              onChange={handleIncomeNameChange}
+              onChange={handleControlledInputChange}
               required
               autoFocus
               className="form-control"
@@ -86,7 +93,7 @@ export const IncomeForm = () => {
             <input
               type="text"
               id="description"
-              onChange={handleIncomeDescriptionChange}
+              onChange={handleControlledInputChange}
               required
               autoFocus
               className="form-control"
@@ -97,11 +104,11 @@ export const IncomeForm = () => {
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="amount"> Income Amount:</label>
+            <label htmlFor="amount"> Income Amount: $ </label>
             <input
-              type="text"
+              type="number"
               id="amount"
-              onChange={handleIncomeAmountChange}
+              onChange={handleControlledInputChange}
               required
               autoFocus
               className="form-control"
@@ -113,10 +120,10 @@ export const IncomeForm = () => {
         <fieldset>
           <div className="form-group">
             <label htmlFor="eventDate"> Income Event Date:</label>
-            <input
-              type="text"
+            <input placeholder="DD-MM-YY"
+              type="date"
               id="eventDate"
-              onChange={handleIncomeEventDateChange}
+              onChange={handleControlledInputChange}
               required
               autoFocus
               className="form-control"
@@ -134,5 +141,5 @@ export const IncomeForm = () => {
         </button>
         </form>
           </>
-      );
+      )
 };

@@ -4,19 +4,17 @@ AppForBudgetEase is designed for any User to create their income and expense lis
 
 
 Technologies Used: 
-HTML/CSS
-Javascript
-React
-JSON server
-ERD using dbdiagram
-Figma
-Git/Github
-Postman
-Wireframing
+HTML/CSS,
+Javascript,
+React,
+JSON server,
+ERD using dbdiagram,
+Figma,
+Git/Github,
+Postman,
 Bootstrap
 
-How To Use
-
+How To Use AppForBudgetEase:
 Starting the webpage
 1. Clone the repository: 
 2. From inside the directory on your terminal, run npm install.

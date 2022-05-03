@@ -5,15 +5,16 @@ import { deleteIncome, getAllIncome } from "../../modules/IncomeManager";
 import "./Income.css";
 import { formatDate } from "../../helpers/formatDate";
 
-export const IncomeList = (handleEdit) => {
+export const IncomeList = () => {
     const [income, setIncome] = useState([]);
   
     const navigate = useNavigate()
     const getIncome = () => {
-        return getAllIncome()
+         getAllIncome()
         .then(incomeFromAPI => {
             setIncome(incomeFromAPI)
-       })}
+       });
+    }
        const handleDeleteIncome = id => {
         deleteIncome(id)
         .then(() => getAllIncome().then(setIncome));
@@ -25,24 +26,21 @@ export const IncomeList = (handleEdit) => {
 
     return (
         <>
-        <h1 className="income-header"> This is My Income Page</h1>
-        <div>
-            <Link to={`/income/create`}>
+        <h1 className="income-header"> Welcome to My Income Page</h1>
+        <section className="section-content">
+ 
             <button type="button"
             className="btn"
             onClick={() => {navigate("/income/create")}}>
-           <h4 className="button"> Click Here to Add New Income  </h4>
+            [ Click Here to Add New Income ] 
             </button>
-            </Link>
-
-           </div>
+            </section>
                <div className="incomeContainer-cards">
               {income.map((income, index) => 
               <IncomeCard 
               index = {index}
               key={income.id} 
               income={income}
-              handleEdit={handleEdit}
               handleDeleteIncome= {handleDeleteIncome} />
               )}
                </div>

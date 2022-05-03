@@ -4,7 +4,7 @@ import { addExpense} from '../../modules/ExpenseManager';
 import './Expense.css';
 
 export const ExpenseForm = () => {
-	// State will contain both animal data as well as an isLoading flag.
+	// State will contain both data as well as an isLoading flag.
 	// Define the initial state of the form inputs with useState
 
 	const [expense, setExpense] = useState({
@@ -52,7 +52,7 @@ const handleClickSaveExpense = (event) => {
     return (
         <>
 		<form className="expenseForm">
-			<h2 className="expenseForm__title">Create A New Expense</h2>
+			<h2 className="expenseForm__title"> [ Create A New Expense ]</h2>
 			<fieldset>
 				<div className="form-group">
 					<label htmlFor="name">Expense name:</label>
@@ -73,7 +73,7 @@ const handleClickSaveExpense = (event) => {
 
             <fieldset>
 				<div className="form-group">
-                <label htmlFor="amount">Expense Amount:</label>
+                <label htmlFor="amount">Expense Amount: $ </label>
 					<input type="number" id="amount" onChange={handleControlledInputChange} 
                     required autoFocus className="form-control" 
                     placeholder="Expense amount" value={expense.amount} />
