@@ -31,84 +31,54 @@
   ],
   "income": [
     {
-      "id": 1,
       "userId": 1,
-      "budgetId": 1,
-      "name": "ChantLLC",
-      "description": "fixed income",
-      "amount": "1000",
-      "timestamp": 1649946953650,
-      "eventDate": "2022-04-15"
-    },
-    {
-      "id": 2,
-      "userId": null,
-      "budgetId": 2,
-      "name": "",
-      "description": "",
-      "amount": "101",
-      "timestamp": 0,
-      "eventDate": 1651163391412
-    },
-    {
-      "id": 3,
-      "userId": null,
       "budgetId": 0,
-      "name": "",
-      "description": "",
-      "amount": "251",
-      "timestamp": 0,
-      "eventDate": 1651163500154
+      "name": "DreamTimeLLC",
+      "description": "image royalties c",
+      "amount": "103",
+      "timestamp": 1651605077898,
+      "eventDate": "2022-05-15",
+      "id": 13
     },
     {
-      "id": 4,
-      "userId": 0,
-      "budgetId": 0,
-      "name": "ABCLLC",
-      "description": "fixed income",
-      "amount": "250",
-      "timestamp": 0,
-      "eventDate": 1651163685086
-    },
-    {
-      "id": 5,
-      "userId": 0,
+      "userId": 1,
       "budgetId": 0,
       "name": "DreamTimeLLC",
       "description": "image royalties",
-      "amount": "2",
-      "timestamp": 0,
-      "eventDate": 1651164383313
+      "amount": "100",
+      "timestamp": 1651607641013,
+      "eventDate": "2022-05-05",
+      "id": 14
     },
     {
-      "id": 6,
-      "userId": 0,
-      "budgetId": 0,
-      "name": "DreamTimeLLC",
-      "description": "image royalties",
-      "amount": "3",
-      "timestamp": 0,
-      "eventDate": 1651164523897
-    },
-    {
-      "id": 7,
       "userId": 1,
       "budgetId": 0,
       "name": "DreamTimeLLC",
-      "description": "image royalties2",
-      "amount": "10",
-      "timestamp": 0,
-      "eventDate": 1651523507058
+      "description": "image royalties 1",
+      "amount": "500",
+      "timestamp": 1651608539634,
+      "eventDate": "2022-05-30",
+      "id": 15
     },
     {
-      "id": 8,
       "userId": 1,
-      "budgetId": "1",
+      "budgetId": 0,
       "name": "DreamTimeLLC",
-      "description": "image royalties 3",
-      "amount": "10",
-      "timestamp": 0,
-      "eventDate": 1651588279697
+      "description": "image royalties abc",
+      "amount": "100",
+      "timestamp": 1651608580654,
+      "eventDate": "2022-05-03",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "image royalties 123",
+      "amount": "500",
+      "timestamp": 1651609137855,
+      "eventDate": "2022-05-04",
+      "id": 17
     }
   ],
   "expense": [
@@ -117,7 +87,7 @@
       "budgetId": 0,
       "name": "NES",
       "description": "water",
-      "amount": "50",
+      "amount": "51",
       "isPaid": "",
       "timestamp": 1651092730760,
       "eventDate": "2022-5-08",

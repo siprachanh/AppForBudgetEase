@@ -49,7 +49,7 @@ export const ExpenseFormEdit = () => {
         setIsLoading(true);
 //take set state and add in expense.prop value
         const editedExpense = {
-            budgetId: expense.budgetId.name,
+            // budgetId: expense.budgetId.name,
             name: expense.name, 
             description: expense.description, 
             amount: expense.amount, 

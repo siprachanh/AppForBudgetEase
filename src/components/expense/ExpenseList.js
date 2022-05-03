@@ -25,7 +25,7 @@ const handleDeleteExpense = id => {
     deleteExpense(id)
     .then(() => getAllExpense().then(setExpense));
 };
-//invoke setEx in ExList with auto return
+//invoke setExp in ExList with auto return
 
 useEffect(() => {
     getExpense();
@@ -35,6 +35,7 @@ useEffect(() => {
 
 return (
     <>
+    <h1 className="expense-header"> Welcome to My Expense Page</h1>
     <section className="section-content">
         <button type="button"
         className="btn"
@@ -43,7 +44,8 @@ return (
     </button>
 </section>
     <div className="container-cards">
-        {expense.map(expense => <ExpenseCard 
+        {expense.map((expense, index) => <ExpenseCard 
+        index = {index}
         key={expense.id} 
         expense={expense}
         handleDeleteExpense= {handleDeleteExpense}/> )}

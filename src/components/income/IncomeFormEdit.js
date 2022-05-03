@@ -7,12 +7,12 @@ import { formatDate } from "../../helpers/formatDate";
 export const IncomeFormEdit = () => {
    
     const [income, setIncome] = useState ({
-        id: 0,
-        budgetId: 0, 
+        // id: 0,
+        // budgetId: 0, 
         name: "", 
         description: "", 
         amount: "", 
-        timestamp: "", 
+        // timestamp: "", 
         eventDate: "" 
       });
 
@@ -20,23 +20,29 @@ export const IncomeFormEdit = () => {
       const [isLoading, setIsLoading] = useState(false)
       const { incomeId } = useParams()
 
-      const handleEditedIncome = (e) => {
+      const handleFieldChange= (e) => {
           const stateToChange = { ...income };
           stateToChange[e.target.id] = e.target.value;
           setIncome(stateToChange);
       };
+      //  set e.t.i to evaluate; then set to state to change
+      const updateExistingIncome = (e) => {
+        e.preventDefault()
+        setIsLoading(true);
 
-      const UpdateIncomeButtonAction = (e) => {
-          e.preventDefault()
-          setIsLoading(true);
+        // take state and add in income.prop value
+
+      // const UpdateIncomeButtonAction = (e) => {
+      //     e.preventDefault()
+      //     setIsLoading(true);
 
           const editedIncome = {
-              budgetId: income.budgetId.name,
+              // budgetId: income.budgetId.name,
               name: income.name,
               description: income.description,
               amount: income.amount,
-              timestamp: income.timestamp,
-              eventDate: Date.now(),
+              // timestamp: income.timestamp,
+              // eventDate: Date.now(),
               id: income.id,
           };
           //pass editedIncome object to the db
@@ -48,11 +54,11 @@ export const IncomeFormEdit = () => {
       
        
   
-      const getIncomeToEdit = () => {
-          return getIncomeById(incomeId).then(incomeById => {
-              setIncome(incomeById)
-          })
-      }
+      // const getIncomeToEdit = () => {
+      //     return getIncomeById(incomeId).then(incomeById => {
+      //         setIncome(incomeById)
+      //     })
+      // }
       
     //   const handleIncomeNameChange = (e) => {
     //     newIncome.name = e.target.value;
@@ -78,8 +84,8 @@ export const IncomeFormEdit = () => {
       
 
       useEffect(() => {
-          getIncomeToEdit(incomeId)
-          .then((income) =>{
+          getIncomeById(incomeId)
+          .then(income => {
               setIncome(income);
               setIsLoading(false);
           });
@@ -91,64 +97,66 @@ export const IncomeFormEdit = () => {
            <form className="editForm--container">
            <h3 className="incomeForm__title">Update Income Form</h3>
         <fieldset>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="budget Id">Edit Income Budget Id</label>
             <input
               type="text"
               id="budgetId"
-              onChange={handleEditedIncome}
+              onChange={handleFieldChange}
               required autoFocus className="form-control" 
               placeholder="Enter Budget Id" value={income.budgetId}/>
-          </div>
-        </fieldset>
-        <fieldset>
+          </div> */}
+
         <div className="form-group">
           <label htmlFor="name">Edit Income Name</label>
             <input
               type="text"
               id="name"
-              onChange={handleEditedIncome}
+              onChange={handleFieldChange}
               required autoFocus className="form-control" 
               placeholder="Enter Income Name" value={income.name}/>
           </div>
-        </fieldset>
-        <fieldset>
+
         <div className="form-group">
           <label htmlFor="description">Edit Income Description</label>
             <input
               type="text"
               id="description"
-              onChange={handleEditedIncome}
+              onChange={handleFieldChange}
               required autoFocus className="form-control" 
               placeholder="Enter Description" value={income.description}/>
           </div>
-        </fieldset>
-        <fieldset>
+
         <div className="form-group">
           <label htmlFor="amount">Edit Income Amount</label>
             <input
               type="text"
               id="amount"
-              onChange={handleEditedIncome}
+              onChange={handleFieldChange}
               required autoFocus className="form-control" 
               placeholder="Enter Amount" value={income.amount}/>
           </div>
-        </fieldset>
-        <fieldset>
+
         <div className="form-group">
           <label htmlFor="eventDate">Edit Income Event Date</label>
             <input
               type="text"
               id="eventDate"
-              onChange={handleEditedIncome}
+              onChange={handleFieldChange}
               required autoFocus className="form-control" 
               placeholder="Enter Event Date" value={income.eventDate}/>
           </div>
-        </fieldset>
-        <button >Close</button>
+     
+        {/* <button >Close</button> */}
+        <div className="alignRight">
         <button 
         disabled={isLoading} 
-        type="button" onClick={UpdateIncomeButtonAction}>Save Updated Income</button>
+        type="button" onClick={updateExistingIncome}
+          className="btn btn-primary" > Save Updated Income</button>
+         </div>
+         </fieldset>
         </form>
+       
     </>
-      )}
+      );
+    }

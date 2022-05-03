@@ -16,7 +16,7 @@ export const ExpenseCard = ({index, expense, handleDeleteExpense}) => {
             {expense.name}
           </span></h3>
           <h6> Expense Description: {expense.description}</h6>
-          <h6> Expense Amount:
+          <h6> Expense Amount: $
                 <span className="card-expenseamount">{expense.amount}</span>
               </h6>
           <h6> Expense Due Date: {expense.eventDate}</h6>
@@ -46,7 +46,7 @@ export const ExpenseCard = ({index, expense, handleDeleteExpense}) => {
           {expense.name}
         </span></h4>
         <h4>Expense Description: {expense.description}</h4>
-        <h6> Expense Amount:
+        <h6> Expense Amount: $
                 <span className="card-expenseamount">{expense.amount}</span>
               </h6>
         <h6> Expense Due Date: {expense.eventDate}</h6>
