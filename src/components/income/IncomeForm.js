@@ -17,7 +17,8 @@ export const IncomeForm = () => {
         eventDate: "",
       });
     //empty object
-    const [isLoading, setIsLoading] = useState(true);
+    
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const newIncome = { ...income};
     // navi gives ability to change URL
@@ -120,7 +121,7 @@ export const IncomeForm = () => {
         <fieldset>
           <div className="form-group">
             <label htmlFor="eventDate"> Income Event Date:</label>
-            <input placeholder="DD-MM-YY"
+            <input placeholder="YY-MM-DD"
               type="date"
               id="eventDate"
               onChange={handleControlledInputChange}

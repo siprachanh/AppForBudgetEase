@@ -136,6 +136,17 @@
       "timestamp": 1651588132534,
       "eventDate": "2022-05-30",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "Kroger",
+      "description": "groceries",
+      "amount": "75",
+      "isPaid": "",
+      "timestamp": 1651612620276,
+      "eventDate": "2022-05-03",
+      "id": 18
     }
   ],
   "budget": [
