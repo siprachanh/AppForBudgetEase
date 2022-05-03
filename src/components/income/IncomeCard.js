@@ -9,6 +9,7 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
         <>
           <div className="first-card" id={`income_${income.id}`}>
             <div className="first-card-font" id="first-event-font">
+              
             <h3>Income Name: <span className="card-incomename">
             {income.name}
           </span></h3>
