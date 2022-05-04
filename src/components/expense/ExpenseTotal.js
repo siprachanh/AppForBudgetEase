@@ -16,8 +16,8 @@ export const ExpenseTotal = () => {
     getAllExpense().then(allExpense => {
         console.log(allExpense)
         let totalExpense = 0
-        allExpense.forEach(singleExpense => {
-            totalExpense += parseInt(singleExpense.amount);
+        allExpense.forEach(expenseObj => {
+            totalExpense += parseInt(expenseObj.amount);
         })
         console.log(totalExpense)
         setExpenseTotal(totalExpense)

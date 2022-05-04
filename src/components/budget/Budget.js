@@ -47,16 +47,20 @@ const getTotalIncome = () => {
     getTotalIncome()
   }, []);
 
+
   
  return (
   <>
   <section className="section-content">
-  <h1>  My Income and Expense Total Page </h1>
+  <h1><strong>My Income and Expense Total Page </strong> </h1>
      
-     <h2>This is my current income total: $ {incomeTotal}  </h2>
+     <h2><strong> This is my current income total: $ {incomeTotal}  </strong> </h2>
 
-     <h2> This is my current expense total: $ {expenseTotal} </h2>
+     <h2><strong>  This is my current expense total: $ {expenseTotal}</strong>  </h2>
+
+     <h2> This is my Remaining Budget: $ {incomeTotal - expenseTotal} </h2>
      </section>
    </>
  ); 
 }
+// when creating state based on previous state, use callback form

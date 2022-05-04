@@ -52,7 +52,7 @@ const handleClickSaveExpense = (event) => {
     return (
         <>
 		<form className="expenseForm">
-			<h2 className="expenseForm__title"> [ Create A New Expense ]</h2>
+			<h2 className="expenseForm__title"><strong>  Create A New Expense </strong></h2>
 			<fieldset>
 				<div className="form-group">
 					<label htmlFor="name">Expense name:</label>

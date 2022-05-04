@@ -57,7 +57,7 @@ export const IncomeForm = () => {
       return (
           <>
            <form className="incomeForm">
-        <h3 className="incomeForm__title">[ Create New Income Form ]</h3>
+        <h3 className="incomeForm__title"><strong> Create New Income Form </strong></h3>
         {/* <fieldset> */}
           {/* <div className="form-group">
             <label htmlFor="BudgetId"> BudgetId:</label>

@@ -35,12 +35,12 @@ useEffect(() => {
 
 return (
     <>
-    <h1 className="expense-header"> Welcome to My Expense Page</h1>
+    <h1 className="expense-header"> <strong>Welcome to My Expense Page</strong></h1>
     <section className="section-content">
         <button type="button"
         className="btn"
         onClick={() => {navigate("/expense/create")}}>
-  [ Click Here to Add New Expense ]
+  <strong> [ Click Here to Add New Expense ] </strong>
     </button>
 </section>
     <div className="container-cards">

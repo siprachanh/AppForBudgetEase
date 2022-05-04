@@ -12,8 +12,8 @@ export const IncomeTotal = ()=> {
         getAllIncome().then(allIncome => {
             console.log(allIncome)
             let totalIncome = 0 
-            allIncome.forEach(singleIncome => {
-                totalIncome += parseInt(singleIncome.amount);
+            allIncome.forEach(incomeObj => {
+                totalIncome += parseInt(incomeObj.amount);
             })
             console.log(totalIncome)
             setIncomeTotal(totalIncome)
@@ -40,8 +40,9 @@ export const IncomeTotal = ()=> {
 
     return (
         <>
+        <div className='income-total'></div>
         <h1> This is your income total: {incomeTotal} </h1>
-        {/* <div className='income-total'>
+        {/* 
             <IncomeTotal incomeTotal={incomeTotal} />
             <IncomeList income = {income} setIncome={setIncome} /> */}
         

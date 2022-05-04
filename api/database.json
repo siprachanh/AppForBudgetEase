@@ -79,6 +79,26 @@
       "timestamp": 1651609137855,
       "eventDate": "2022-05-04",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "image royalties 4",
+      "amount": "10",
+      "timestamp": 1651678084891,
+      "eventDate": "2022-05-07",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "",
+      "amount": "708",
+      "timestamp": 1651684630100,
+      "eventDate": "2022-05-05",
+      "id": 19
     }
   ],
   "expense": [
@@ -147,6 +167,17 @@
       "timestamp": 1651612620276,
       "eventDate": "2022-05-03",
       "id": 18
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "Sam's Club",
+      "description": "bike ",
+      "amount": "1400",
+      "isPaid": "",
+      "timestamp": 1651680439502,
+      "eventDate": "2022-05-05",
+      "id": 19
     }
   ],
   "budget": [
