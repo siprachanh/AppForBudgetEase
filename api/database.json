@@ -79,6 +79,26 @@
       "timestamp": 1651684630100,
       "eventDate": "2022-05-05",
       "id": 19
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "image royalties abc",
+      "amount": "2",
+      "timestamp": 1651849575059,
+      "eventDate": "2022-05-06",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "DreamTimeLLC",
+      "description": "image royalties 1",
+      "amount": "10",
+      "timestamp": 1651849651986,
+      "eventDate": "2022-05-06",
+      "id": 21
     }
   ],
   "expense": [
