@@ -82,9 +82,10 @@ useEffect(() => {
               className="form-control"
               onChange={handleFieldChange}
               id="name"
+              placeholder="Enter Expense Name"
               value={expense.name}
             />
-            <label htmlFor="name">Expense name</label>
+            <label htmlFor="name">Edit Expense name</label>
 
             <input
               type="text"
@@ -94,7 +95,7 @@ useEffect(() => {
               id="description"
               value={expense.description}
             />
-            <label htmlFor="breed">Expense Description</label>
+            <label htmlFor="description">Edit Expense Description</label>
             <input
               type="text"
               required
@@ -103,7 +104,7 @@ useEffect(() => {
               id="amount"
               value={expense.amount}
             />
-            <label htmlFor="amount">Expense Amount</label>
+            <label htmlFor="amount">Edit Expense Amount</label>
             <input
               type="date"
               required
@@ -125,7 +126,7 @@ useEffect(() => {
               type="button" disabled={isLoading}
               onClick={updateExistingExpense}
               className="btn btn-primary"
-            >Save Changes</button>
+            >Save Updated Expense</button>
           </div>
         </fieldset>
       </form>

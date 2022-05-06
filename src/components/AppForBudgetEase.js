@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ApplicationViews } from "./ApplicationViews";
 import "./AppForBudgetEase.css";
 import { NavBar } from "./nav/NavBar";
+import { Footer } from "./nav/Footer";
 
 
 
@@ -28,6 +29,7 @@ export const AppForBudgetEase = () => {
         isAuthenticated={isAuthenticated}
         setIsAuthenticated={setIsAuthenticated}
       />
+      <Footer/>
      </>
   );
 };

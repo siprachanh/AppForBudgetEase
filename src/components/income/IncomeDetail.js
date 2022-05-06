@@ -23,7 +23,7 @@ export const IncomeDetail = () => {
   useEffect(() => {
     // call useEff to tell it a fn to call and get income data from db and update state once the html of comp is in the DOM
     //getIncomeById(id) from IncomeManager and hang on to the data; put it into state
-    console.log("useEffect", incomeId)
+   
     getIncomeById(incomeId)
       .then(income => {
        setIncome(income);

@@ -58,7 +58,7 @@ const handleClickSaveExpense = (event) => {
 					<label htmlFor="name">Expense name:</label>
 					<input type="text" id="name" onChange={handleControlledInputChange} 
                     required autoFocus className="form-control" 
-                    placeholder="Expense name" value={expense.name} />
+                    placeholder="Enter Expense name" value={expense.name} />
 				</div>
 			</fieldset>
 

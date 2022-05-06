@@ -1,6 +1,9 @@
 strong {
     font-weight: bold;
+    font-family: 'Fira Sans', sans-serif; 
   }
  
-
+#root{
+  background-color: #eeeeee;
+}
 

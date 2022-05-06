@@ -34,28 +34,8 @@
       "userId": 1,
       "budgetId": 0,
       "name": "DreamTimeLLC",
-      "description": "image royalties c",
-      "amount": "103",
-      "timestamp": 1651605077898,
-      "eventDate": "2022-05-15",
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "budgetId": 0,
-      "name": "DreamTimeLLC",
-      "description": "image royalties",
-      "amount": "100",
-      "timestamp": 1651607641013,
-      "eventDate": "2022-05-05",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "budgetId": 0,
-      "name": "DreamTimeLLC",
       "description": "image royalties 1",
-      "amount": "500",
+      "amount": "750",
       "timestamp": 1651608539634,
       "eventDate": "2022-05-30",
       "id": 15
@@ -178,6 +158,17 @@
       "timestamp": 1651680439502,
       "eventDate": "2022-05-05",
       "id": 19
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "Pet Med LLC",
+      "description": "Puppy's shots",
+      "amount": "33",
+      "isPaid": "",
+      "timestamp": 1651805401511,
+      "eventDate": "2022-05-06",
+      "id": 20
     }
   ],
   "budget": [

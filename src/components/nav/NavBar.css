@@ -2,6 +2,7 @@
 
 .logo {
     height: 100px;
+    margin-right: 50px;
     padding: 2;
     align-content: left;
    
@@ -21,10 +22,10 @@ nav {
     padding: 2 rem 1 rem;
     color: #091540;
     background-color: #0c0f0e;
-    border-radius: 15px;
+    border-radius: 15 px;
     border-color: #1c1f1d;
     text-decoration: black;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 900;
     font-style: normal;
     font-family: 'Fira Sans', sans-serif; 

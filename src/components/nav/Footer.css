@@ -1,0 +1,9 @@
+.footer {
+    background-color: rgb(151, 52, 179);
+    border-top: 1 em solid black;
+    padding: 10px 0 10px 20px;
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Fira Sans', sans-serif; 
+
+}
