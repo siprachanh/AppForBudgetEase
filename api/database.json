@@ -99,6 +99,16 @@
       "timestamp": 1651849651986,
       "eventDate": "2022-05-06",
       "id": 21
+    },
+    {
+      "userId": 1,
+      "budgetId": 0,
+      "name": "ABCLLC",
+      "description": "nonfixed income",
+      "amount": "2000",
+      "timestamp": 1651868675622,
+      "eventDate": "2022-05-05",
+      "id": 22
     }
   ],
   "expense": [

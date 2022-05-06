@@ -1,12 +1,9 @@
 import React, { useState,useEffect, useNavigate, useContext } from "react";
-// import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';
-// import { useStyles } from "./BudgetStyles";
-// react hook
-
 import { IncomeTotal } from "../income/IncomeTotal";
 import { ExpenseTotal } from "../expense/ExpenseTotal";
 import { getAllIncome } from "../../modules/IncomeManager";
 import { getAllExpense } from "../../modules/ExpenseManager";
+import { PieChart } from 'react-minimal-pie-chart';
 
 
 
@@ -49,13 +46,29 @@ const getTotalIncome = () => {
     getTotalIncome()
   }, []);
 
-
-  
+const dataMock= [
+  { title: 'expenseTotal', value: expenseTotal, color: '#78acdc' },
+  { title: 'incomeTotal', value: incomeTotal, color: '#510bff' },
+  { title: 'balance', value: incomeTotal - expenseTotal, color: '#9fa5b9' },
+]
+// use chart library to render graphic rep of amount of incomeTotal, expenseTotal and remaining balance.
  return (
   <>
   <div className="card-main">
-  <h1><strong>  Welcome to My Income and Expense Total Page </strong> </h1>
-     
+  <h1><strong>  Welcome to My AppForBudgetEase Income and Expense Total Page </strong> </h1>
+  <PieChart
+  data={dataMock}
+  style={{height: "400px"}}
+  label={({dataEntry})=> dataEntry.value }
+  labelStyle={(index)=> ({
+    fill: dataMock[index].color,
+    fontSize: "10px", 
+    fontFamily: "sans-serif",
+  })}
+
+  labelPosition={112}
+
+/>
     </div>
        
     <div className="card">
