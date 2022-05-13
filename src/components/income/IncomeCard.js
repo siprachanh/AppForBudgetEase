@@ -54,6 +54,9 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
               <h4>Income Description:
                 <span className="card-incomedescription">{income.description}</span>
               </h4>
+              {/* <h4>Income Budget Type:
+                <span className="card-incomeBudgetId">{budgetIncome.id}</span>
+              </h4> */}
               <h6>Income Amount: $
                 <span className="card-incomeamount">{income.amount}</span>
               </h6>

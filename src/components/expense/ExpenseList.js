@@ -40,7 +40,7 @@ return (
         <button type="button"
         className="btn"
         onClick={() => {navigate("/expense/create")}}>
-  <strong> [ Click Here to Add New Expense ] </strong>
+    Add New Expense 
     </button>
 </section>
     <div className="container-cards">

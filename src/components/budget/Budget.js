@@ -11,7 +11,7 @@ export const Budget = ()=> {
 // const classes = useStyles();
   const [expenseTotal, setExpenseTotal] = useState(0);
   const [incomeTotal, setIncomeTotal] = useState(0);
-
+let expense="expense"
 
 const getTotalExpense = () => {
   getAllExpense().then(allExpense => {
@@ -47,21 +47,12 @@ const getTotalIncome = () => {
   }, []);
 
 const dataMock= [
-  { title: 'expenseTotal', value: expenseTotal, color: '#7D8491' },
-  { title: 'incomeTotal', value: incomeTotal, color: '#BBBE64' },
-  { title: 'balance', value: incomeTotal - expenseTotal, color: '#5DB7DE' },
+  { title: 'Expense Total', value: expenseTotal, color: '#6c757d' },
+  { title: 'Income Total', value: incomeTotal, color: '#198754' },
+  { title: 'Balance', value: incomeTotal - expenseTotal, color: '#0da5fd' },
 ]
 
-// const options = {
-// maintainAspectRatio: false,
-// responsive: false,
-// legend: {
-//   position: 'left',
-//   lebes: {
-//     boxWidth: 10
-  
-//   }
-// }}
+
 // use chart library to render graphic rep of amount of incomeTotal, expenseTotal and remaining balance.
  return (
   <>
@@ -70,31 +61,30 @@ const dataMock= [
   <PieChart
   data={dataMock}
   style={{height: "425px"}}
-  // options={options}
-  label={({dataEntry})=> dataEntry.value }
+  label={({dataEntry})=> dataEntry.title }
   labelStyle={(index)=> ({
     fill: dataMock[index].color,
-    fontSize: "10px", 
+    fontSize: "8px", 
     fontFamily: "sans-serif",
   })}
 
-  labelPosition={112}
+  labelPosition={110}
 
 />
     </div>
        
-    <div className="card">
+    <div className="card bg-success">
      <h2> This is my current income total:<strong> $ {incomeTotal} </strong>  </h2>
      
      </div>
     
     
-     <div className="card">
+     <div className="card bg-secondary">
      <h2> This is my current expense total:<strong>  $ {expenseTotal}</strong>  </h2>
    
      </div>
      
-     <div className="card">
+     <div className="card bg-primary ">
      <h2>   This is my remaining balance:<strong>  $ {incomeTotal - expenseTotal} </strong></h2>
     
      </div>
