@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { addIncome } from "../../modules/IncomeManager";
+import { getAllBudgetIncome} from "../../modules/IncomeManager"
 import "./Income.css";
 
 export const IncomeForm = () => {
@@ -9,7 +10,7 @@ export const IncomeForm = () => {
 
     const [income, setIncome] = useState({ 
         userId: parseInt(sessionStorage.getItem("AppForBudgetEase_user")), 
-        budgetId: 0, 
+        budgetIncomeId: 0, 
         name: "", 
         description: "", 
         amount: "", 
@@ -19,6 +20,11 @@ export const IncomeForm = () => {
     //empty object
     
     const [isLoading, setIsLoading] = useState(false);
+    // need the 'getAll' in BudgetIncome to complete this section
+    // builds out a dropdown menu
+    const [budgetIncome, setBudgetIncome] = useState ([]);
+
+
     const navigate = useNavigate();
     const newIncome = { ...income};
     // navi gives ability to change URL
@@ -49,10 +55,31 @@ export const IncomeForm = () => {
     //     setIncome(newIncome);
     //   };
       
+
+    // load budgetIncome data and setState
+    useEffect(() => {
+      getAllBudgetIncome().then((data) => setBudgetIncome(data))
+    }, []);
+
+
       const handleClickSaveIncome = (e) => {
         e.preventDefault(); //prevents browser from submitting form until ready
+
+        const budgetIncomeId = income.budgetIncomeId
+
+   if (budgetIncomeId === 0) {
+     window.alert("Please select a budget income type")
+   } else {
+
         addIncome(newIncome).then(() => navigate("/income"));
       };
+
+   
+    //   invoke addBudget passing budget as an argument
+    //  once comeplet, change the url and display the income list
+   }
+
+
 
       return (
           <>
@@ -102,6 +129,19 @@ export const IncomeForm = () => {
               value={income.description}
             />
           </div>
+        </fieldset>
+        <fieldset>
+        <div className="form-group">
+					<label htmlFor="location">Assign Income Budget Type: </label>
+					<select value={income.budgetIncomeId} name="budgetIncomeId" id="budgetIncomeId" onChange={handleControlledInputChange} className="form-control" >
+						<option value="0">Select an income budget type</option>
+						{budgetIncome.map(budgetIncome => (
+							<option key={budgetIncome.id} value={budgetIncome.id}>
+								{budgetIncome.name}
+							</option>
+						))}
+					</select>
+				</div>
         </fieldset>
         <fieldset>
           <div className="form-group">

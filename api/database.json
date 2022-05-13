@@ -32,7 +32,7 @@
   "income": [
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 1,
       "name": "DreamTimeLLC",
       "description": "image royalties 1",
       "amount": "750",
@@ -42,7 +42,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 2,
       "name": "DreamTimeLLC",
       "description": "image royalties abc",
       "amount": "100",
@@ -52,7 +52,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 1,
       "name": "DreamTimeLLC",
       "description": "image royalties 123",
       "amount": "500",
@@ -62,7 +62,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 2,
       "name": "DreamTimeLLC",
       "description": "image royalties 4",
       "amount": "10",
@@ -72,7 +72,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 1,
       "name": "DreamTimeLLC",
       "description": "",
       "amount": "708",
@@ -82,7 +82,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 2,
       "name": "DreamTimeLLC",
       "description": "image royalties abc",
       "amount": "2",
@@ -92,7 +92,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 1,
       "name": "DreamTimeLLC",
       "description": "image royalties 1",
       "amount": "10",
@@ -102,13 +102,23 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetIncomeId": 2,
       "name": "ABCLLC",
       "description": "nonfixed income",
       "amount": "2000",
       "timestamp": 1651868675622,
       "eventDate": "2022-05-05",
       "id": 22
+    },
+    {
+      "userId": 1,
+      "budgetIncomeId": 1,
+      "name": "ABCLLC",
+      "description": "salary",
+      "amount": "1500",
+      "timestamp": 1652464680624,
+      "eventDate": "2022-05-13",
+      "id": 23
     }
   ],
   "expense": [
@@ -199,26 +209,41 @@
       "timestamp": 1651805401511,
       "eventDate": "2022-05-06",
       "id": 20
+    },
+    {
+      "userId": 1,
+      "budgetExpenseId": 1,
+      "name": "CapitalWon",
+      "description": "credit card",
+      "amount": "50",
+      "isPaid": "",
+      "timestamp": 1652465928588,
+      "eventDate": "2022-05-15",
+      "id": 21
     }
   ],
-  "budget": [
+  "budgetIncome": [
     {
       "id": 1,
-      "userId": 1,
-      "balanceId": 1,
-      "description": "Budget1",
-      "amount": "1000",
-      "timestamp": 1649946953800,
-      "eventDate": "2022-04-25"
+      "name": "fixed income",
+      "description": "weekly fixed income amount"
     },
     {
       "id": 2,
-      "userId": 1,
-      "balanceId": 1,
-      "description": "Budget2",
-      "amount": "100",
-      "timestamp": 1650307578100,
-      "eventDate": "2022-04-30"
+      "name": "non fixed income",
+      "description": "weekly non fixed income amount"
+    }
+  ],
+  "budgetExpense": [
+    {
+      "id": 1,
+      "name": "fixed expense",
+      "description": "monthly bills"
+    },
+    {
+      "id": 2,
+      "name": "non fixed expense",
+      "description": "shopping"
     }
   ],
   "balance": [

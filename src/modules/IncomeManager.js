@@ -35,6 +35,11 @@ export const updateIncome = (editedIncome) => {
       body: JSON.stringify(editedIncome),
     }).then(data => data.json());
   }
+
+  export const getAllBudgetIncome = () => {
+    return fetch(`${remoteURL}/budgetIncome`)
+    .then(res => res.json())
+  }
   // add, post, patch to edit, delete the income obj to db
   // promise.all() will give it an array of promise obj; follow it with a single.then
   // that .then will not call its callback fn until all promises have resolved

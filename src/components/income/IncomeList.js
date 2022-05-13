@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { IncomeCard } from "./IncomeCard.js"
-import { deleteIncome, getAllIncome } from "../../modules/IncomeManager";
+import { deleteIncome, getAllIncome, getAllBudgetIncome } from "../../modules/IncomeManager";
 import "./Income.css";
 import { formatDate } from "../../helpers/formatDate";
 

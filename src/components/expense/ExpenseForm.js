@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { addExpense} from '../../modules/ExpenseManager';
+import { addExpense, getAllBudgetExpense} from '../../modules/ExpenseManager';
 import './Expense.css';
 
 export const ExpenseForm = () => {
@@ -9,7 +9,7 @@ export const ExpenseForm = () => {
 
 	const [expense, setExpense] = useState({
     userId: parseInt(sessionStorage.getItem("AppForBudgetEase_user")),
-	  budgetId: 0,
+	  budgetExpenseId: 0,
       name: "", 
       description: "", 
       amount: "", 
@@ -19,6 +19,9 @@ export const ExpenseForm = () => {
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
+    const[budgetExpense, setBudgetExpense] = useState ([]);
+    //  builds out a dropdown menu
+
     const navigate = useNavigate();
     const newExpense = { ...expense }
  //navigate gives ability to change URL
@@ -43,12 +46,25 @@ export const ExpenseForm = () => {
     // update state
     setExpense(newExpense)
 }
+//  load budgetExpense data and setState
+useEffect(() => {
+    getAllBudgetExpense().then((data) => setBudgetExpense(data))
+  }, []);
 
 const handleClickSaveExpense = (event) => {
     event.preventDefault();
     //Prevents the browser from submitting the form
+
+    const budgetExpenseId = expense.budgetExpenseId
+
+    if (budgetExpenseId===0) {
+        window.alert("Please select a budget income type")
+    } else {
+    
     addExpense(newExpense).then(() => navigate("/expense"));
 };
+}
+
     return (
         <>
 		<form className="expenseForm">
@@ -70,7 +86,19 @@ const handleClickSaveExpense = (event) => {
                     placeholder="Expense description" value={expense.description} />
 				</div>
 			</fieldset>
-
+            <fieldset>
+        <div className="form-group">
+					<label htmlFor="location">Assign Expense Budget Type: </label>
+					<select value={expense.budgetExpenseId} name="budgetExpenseId" id="budgetExpenseId" onChange={handleControlledInputChange} className="form-control" >
+						<option value="0">Select an expense budget type</option>
+						{budgetExpense.map(budgetExpense => (
+							<option key={budgetExpense.id} value={budgetExpense.id}>
+								{budgetExpense.name}
+							</option>
+						))}
+					</select>
+				</div>
+        </fieldset>
             <fieldset>
 				<div className="form-group">
                 <label htmlFor="amount">Expense Amount: $ </label>
