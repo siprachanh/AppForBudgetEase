@@ -47,10 +47,21 @@ const getTotalIncome = () => {
   }, []);
 
 const dataMock= [
-  { title: 'expenseTotal', value: expenseTotal, color: '#78acdc' },
-  { title: 'incomeTotal', value: incomeTotal, color: '#510bff' },
-  { title: 'balance', value: incomeTotal - expenseTotal, color: '#9fa5b9' },
+  { title: 'expenseTotal', value: expenseTotal, color: '#7D8491' },
+  { title: 'incomeTotal', value: incomeTotal, color: '#BBBE64' },
+  { title: 'balance', value: incomeTotal - expenseTotal, color: '#5DB7DE' },
 ]
+
+// const options = {
+// maintainAspectRatio: false,
+// responsive: false,
+// legend: {
+//   position: 'left',
+//   lebes: {
+//     boxWidth: 10
+  
+//   }
+// }}
 // use chart library to render graphic rep of amount of incomeTotal, expenseTotal and remaining balance.
  return (
   <>
@@ -58,7 +69,8 @@ const dataMock= [
   <h1><strong>  Welcome to My AppForBudgetEase Income and Expense Total Page </strong> </h1>
   <PieChart
   data={dataMock}
-  style={{height: "400px"}}
+  style={{height: "425px"}}
+  // options={options}
   label={({dataEntry})=> dataEntry.value }
   labelStyle={(index)=> ({
     fill: dataMock[index].color,
@@ -72,18 +84,18 @@ const dataMock= [
     </div>
        
     <div className="card">
-     <h2><strong> This is my current income total: $ {incomeTotal}  </strong> </h2>
+     <h2> This is my current income total:<strong> $ {incomeTotal} </strong>  </h2>
      
      </div>
     
     
      <div className="card">
-     <h2><strong>  This is my current expense total: $ {expenseTotal}</strong>  </h2>
+     <h2> This is my current expense total:<strong>  $ {expenseTotal}</strong>  </h2>
    
      </div>
      
      <div className="card">
-     <h2> <strong>   This is my remaining balance: $ {incomeTotal - expenseTotal} </strong></h2>
+     <h2>   This is my remaining balance:<strong>  $ {incomeTotal - expenseTotal} </strong></h2>
     
      </div>
     

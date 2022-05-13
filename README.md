@@ -9,7 +9,7 @@ Javascript,
 React,
 JSON server,
 ERD using dbdiagram,
-Figma,
+Figma (wireframe),
 Git/Github,
 Postman,
 Bootstrap
@@ -17,7 +17,7 @@ Bootstrap
 How To Use AppForBudgetEase:
 Starting the webpage
 1. Clone the repository
-2. From inside the directory on your terminal, run npm install.
+2. From inside the directory on your terminal, run npm install
 3. Register a name and email address
 4. Create your income and expense cards and lists
 
