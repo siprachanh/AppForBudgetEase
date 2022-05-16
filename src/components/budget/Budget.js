@@ -64,7 +64,7 @@ const dataMock= [
   label={({dataEntry})=> dataEntry.title }
   labelStyle={(index)=> ({
     fill: dataMock[index].color,
-    fontSize: "8px", 
+    fontSize: "5px", 
     fontFamily: "sans-serif",
   })}
 

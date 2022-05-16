@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { updateExpense, getExpenseById} from '../../modules/ExpenseManager';
+import { updateExpense, getExpenseById, getAllBudgetExpense} from '../../modules/ExpenseManager';
 import './Expense.css';
 
 export const ExpenseFormEdit = () => {
     const [expense, setExpense] = useState({
-        // budgetId: 0,
+        budgetExpenseId: 0,
         name: "", 
         description: "", 
         amount: "", 
@@ -15,8 +15,11 @@ export const ExpenseFormEdit = () => {
       });
   
       const [isLoading, setIsLoading] = useState(false);
+      const [budgetExpense, setBudgetExpense] = useState([]);
+
       const {expenseId} = useParams();
       const navigate = useNavigate();
+
       const handleControlledInputChange = (event) => {
 		/* When changing a state object or array,
 		always create a copy, make changes, and then set state. the input fields, are controlled by what's in state, represent what's in state*/
@@ -37,6 +40,11 @@ export const ExpenseFormEdit = () => {
 		setExpense(newExpense)
 	}
 
+  // load expenseBudget data and setState
+  useEffect(() => {
+    getAllBudgetExpense().then((data) => setBudgetExpense(data))
+  }, []);
+
     const handleFieldChange = evt => {
         const stateToChange = { ...expense };
         stateToChange[evt.target.id] = evt.target.value;
@@ -49,20 +57,22 @@ export const ExpenseFormEdit = () => {
         setIsLoading(true);
 //take set state and add in expense.prop value
         const editedExpense = {
-            // budgetId: expense.budgetId.name,
+            id: expenseId,
+            budgetExpenseId: expense.budgetExpenseId.name,
             name: expense.name, 
             description: expense.description, 
             amount: expense.amount, 
             isPaid: expense.isPaid, 
             // timestamp: expense.timestamp, 
             // eventDate: Date.now(),
-            id: expense.id,
+    
         }
     //pass the edited object to the database
   updateExpense(editedExpense)
   .then(() => navigate("/expense")
   )
 }
+//  the fn passed to useEffect calls API to get the expensed based on exp id 
 useEffect(() => {
     getExpenseById(expenseId)
       .then(expense => {
@@ -86,8 +96,21 @@ useEffect(() => {
               value={expense.name}
             />
             <label htmlFor="name">Edit Expense name</label>
+      </div>
+            <div className="form-group">
+					<label htmlFor="budgetExpense"> Type of Expense Budget: </label>
+					<select value={expense.budgetExpenseId} name="budgetExpenseId" id="budgetExpenseId" onChange={handleControlledInputChange} className="form-control" >
+						<option value="0">Select a type</option>
+						{budgetExpense.map(b => (
+							<option key={b.id} value={b.id}>
+								{b.name}
+							</option>
+						))}
+					</select>
+				</div>
 
-            <input
+            <div className="formgrid">
+             <input
               type="text"
               required
               className="form-control"
@@ -121,6 +144,7 @@ useEffect(() => {
                     value={expense.timestamp} />
                <label htmlFor="expense posted">Expense Date Posted:</label> */}
           </div>
+          
           <div className="alignRight">
             <button
               type="button" disabled={isLoading}
