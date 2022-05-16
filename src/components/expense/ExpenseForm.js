@@ -23,14 +23,14 @@ export const ExpenseForm = () => {
     //  builds out a dropdown menu
 
     const navigate = useNavigate();
-    const newExpense = { ...expense }
+   
  //navigate gives ability to change URL
  //when a field changes, update state. The return will re-render and display based on the values in state
 
  const handleControlledInputChange = (event) => {
     /* When changing a state object or array,
     /spread oper creates a copy, make changes, and then set state. the input fields, are controlled by what's in state, represent what's in state*/
-    
+    const newExpense = { ...expense }
     let selectedVal = event.target.value
     
     //this becomes the field of the value we're editing
@@ -61,7 +61,7 @@ const handleClickSaveExpense = (event) => {
         window.alert("Please select a budget income type")
     } else {
     
-    addExpense(newExpense).then(() => navigate("/expense"));
+    addExpense(expense).then(() => navigate("/expense"));
 };
 }
 

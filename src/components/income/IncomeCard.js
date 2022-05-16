@@ -76,14 +76,17 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
                 </button>
               </Link>
   
-              <button
-                className="btn"
+              <Link to={"#"}>
+                <button
+                // className="btn"
                 id="delete"
                 type="button"
                 onClick={() => handleDeleteIncome(income.id)}
               >
+                
                 Delete 
-              </button>
+                </button>
+              </Link>
           </div>
           </div>
         </>

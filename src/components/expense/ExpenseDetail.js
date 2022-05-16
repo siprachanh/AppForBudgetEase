@@ -7,7 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 export const ExpenseDetail = () => {
   const [expense, setExpense] = useState({ 
-      budgetId: 0,
+      budgetExpenseId: 0,
       name: "", 
       description: "", 
       amount: "", 
@@ -46,9 +46,9 @@ export const ExpenseDetail = () => {
   return (
     <section className="expense">
       <h3 className="expense__name">Name: {expense.name}</h3>
-      <div className="expense_budgetId">{expense.budgetId?.name}</div>
+      <div className="expense_budgetExpenseId">{expense.budgetExpenseId?.name}</div>
       <div className="expense__description">Description: {expense.description}</div>
-      <div className="expense__amount">Amount:$ {expense.amount}</div>
+      <div className="expense__amount">Amount: $ {expense.amount}</div>
       {/* <div className="expense__isPaid">is Paid: {expense.isPaid?.name}</div> */}
       <button type="button" disabled={isLoading} onClick={handleDelete}>
           Remove

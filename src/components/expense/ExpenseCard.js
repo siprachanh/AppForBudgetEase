@@ -54,6 +54,7 @@ export const ExpenseCard = ({index, expense, handleDeleteExpense}) => {
                 <span className="expensecreated-date"> {theDate}</span>
               </h6>
       </div>
+      <div className="card-modifiers">
        <Link to={`/expense/${expense.id}`}>
         <button>Details</button>
         </Link>
@@ -63,7 +64,8 @@ export const ExpenseCard = ({index, expense, handleDeleteExpense}) => {
       <button type="button" onClick={() => handleDeleteExpense(expense.id)}>
         Remove</button>
     </div>
+    </div>
     </>
 );
 }
-// }
+

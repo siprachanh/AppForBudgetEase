@@ -32,27 +32,7 @@
   "income": [
     {
       "userId": 1,
-      "budgetIncomeId": 1,
-      "name": "DreamTimeLLC",
-      "description": "image royalties 1",
-      "amount": "750",
-      "timestamp": 1651608539634,
-      "eventDate": "2022-05-30",
-      "id": 15
-    },
-    {
-      "userId": 1,
       "budgetIncomeId": 2,
-      "name": "DreamTimeLLC",
-      "description": "image royalties abc",
-      "amount": "100",
-      "timestamp": 1651608580654,
-      "eventDate": "2022-05-03",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "budgetIncomeId": 1,
       "name": "DreamTimeLLC",
       "description": "image royalties 123",
       "amount": "500",
@@ -72,7 +52,7 @@
     },
     {
       "userId": 1,
-      "budgetIncomeId": 1,
+      "budgetIncomeId": 2,
       "name": "DreamTimeLLC",
       "description": "",
       "amount": "708",
@@ -92,7 +72,7 @@
     },
     {
       "userId": 1,
-      "budgetIncomeId": 1,
+      "budgetIncomeId": 2,
       "name": "DreamTimeLLC",
       "description": "image royalties 1",
       "amount": "10",
@@ -102,9 +82,9 @@
     },
     {
       "userId": 1,
-      "budgetIncomeId": 2,
+      "budgetIncomeId": 1,
       "name": "ABCLLC",
-      "description": "nonfixed income",
+      "description": "salary",
       "amount": "2000",
       "timestamp": 1651868675622,
       "eventDate": "2022-05-05",
@@ -124,7 +104,7 @@
   "expense": [
     {
       "userId": 4,
-      "budgetId": 0,
+      "budgetExpenseId": 1,
       "name": "NES",
       "description": "water",
       "amount": "51",
@@ -135,7 +115,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetExpenseId": 2,
       "name": "Pet Med LLC",
       "description": "groom3",
       "amount": "55",
@@ -146,7 +126,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetExpenseId": 1,
       "name": "Xfinity Bill",
       "description": "internet",
       "amount": "75",
@@ -157,7 +137,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetExpenseId": 0,
       "name": "CapitalWon",
       "description": "credit card",
       "amount": "250",
@@ -168,7 +148,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetExpenseId": 1,
       "name": "Bank of Earth",
       "description": "earth loan 1",
       "amount": "115",
@@ -179,7 +159,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetExpenseId": 1,
       "name": "Kroger",
       "description": "groceries",
       "amount": "75",
@@ -190,7 +170,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetExpenseId": 2,
       "name": "Sam's Club",
       "description": "bike ",
       "amount": "1400",
@@ -201,7 +181,7 @@
     },
     {
       "userId": 1,
-      "budgetId": 0,
+      "budgetExpenseId": 2,
       "name": "Pet Med LLC",
       "description": "Puppy's shots",
       "amount": "33",
@@ -220,6 +200,17 @@
       "timestamp": 1652465928588,
       "eventDate": "2022-05-15",
       "id": 21
+    },
+    {
+      "userId": 1,
+      "budgetExpenseId": 1,
+      "name": "CapitolWon",
+      "description": "credit card",
+      "amount": "116",
+      "isPaid": "",
+      "timestamp": 1652719168862,
+      "eventDate": "2022-05-20",
+      "id": 24
     }
   ],
   "budgetIncome": [

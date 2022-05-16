@@ -35,6 +35,7 @@ useEffect(() => {
 
 return (
     <>
+  
     <h1 className="expense-header"> <strong>Welcome to My Expense Page</strong></h1>
     <section className="section-content">
         <button type="button"

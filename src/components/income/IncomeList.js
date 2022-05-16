@@ -32,7 +32,7 @@ export const IncomeList = () => {
             <button type="button"
             className="btn"
             onClick={() => {navigate("/income/create")}}>
-            <strong>[ Click Here to Add New Income ] </strong>
+            <strong> Add New Income Item </strong>
             </button>
             </section>
                <div className="incomeContainer-cards">
