@@ -35,7 +35,7 @@
       "budgetIncomeId": 2,
       "name": "DreamTimeLLC",
       "description": "image royalties 123",
-      "amount": "500",
+      "amount": "501",
       "timestamp": 1651609137855,
       "eventDate": "2022-05-04",
       "id": 17
@@ -44,7 +44,7 @@
       "userId": 1,
       "budgetIncomeId": 2,
       "name": "DreamTimeLLC",
-      "description": "image royalties 4",
+      "description": "image royalties 4--pic number 12",
       "amount": "10",
       "timestamp": 1651678084891,
       "eventDate": "2022-05-07",
@@ -99,6 +99,16 @@
       "timestamp": 1652464680624,
       "eventDate": "2022-05-13",
       "id": 23
+    },
+    {
+      "userId": 1,
+      "budgetIncomeId": 1,
+      "name": "ABCLLC",
+      "description": "salary",
+      "amount": "1000",
+      "timestamp": 1652737810682,
+      "eventDate": "2022-05-25",
+      "id": 24
     }
   ],
   "expense": [

@@ -51,11 +51,27 @@ export const IncomeCard = ({ index, income, handleDeleteIncome }) => {
               <h2>
                 Income Name:<span className="card-incomename">{income.name}</span>
               </h2>
+              {/* <fieldset> */}
+        {/* <div className="form-group"> */}
+					{/* <h2>
+           <label htmlFor="budgetIncomeId">Assign Income Budget Type: </label>
+					<select value={income.budgetIncomeId} name="budgetIncomeId" id="budgetIncomeId" onChange={handleControlledInputChange} className="form-control" >
+						<option value="0">Select an income budget type</option>
+						{budgetIncome.map(budgetIncome => (
+							<option key={budgetIncome.id} value={budgetIncome.id}>
+								{budgetIncome.name}
+							</option>
+						))}
+					</select>
+          </h2> */}
+				{/* </div> */}
+        {/* </fieldset> */}
+
               <h4>Income Description:
                 <span className="card-incomedescription">{income.description}</span>
               </h4>
               {/* <h4>Income Budget Type:
-                <span className="card-incomeBudgetId">{budgetIncome.id}</span>
+                <span className="card-budgetIncomeId">{budgetIncome.id}</span>
               </h4> */}
               <h6>Income Amount: $
                 <span className="card-incomeamount">{income.amount}</span>

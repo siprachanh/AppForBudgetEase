@@ -1,9 +1,22 @@
 .footer {
-    background-color: rgb(151, 52, 179);
+    background-color: rgb(179, 114, 173);
     border-top: 1 em solid black;
     padding: 10px 0 10px 20px;
-    margin: 0;
+    margin: auto;
     font-size: 15px;
     font-family: 'Fira Sans', sans-serif; 
+    width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    border-bottom: 2em;
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    
+
+}
+.footer_item{
+    margin: 0 1rem;
 
 }

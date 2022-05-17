@@ -116,3 +116,10 @@
   .card button:hover {
     background-color: rgb(158, 158, 165);
   }
+
+  .footer {
+    width: 100vw;
+    border-top: .25em solid rgb(145, 142, 142);
+   
+  
+  }
