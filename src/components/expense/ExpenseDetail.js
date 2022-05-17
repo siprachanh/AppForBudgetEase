@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { getExpenseById, deleteExpense } from '../../modules/ExpenseManager';
 import './ExpenseDetail.css';
 import "./Expense.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 
-export const ExpenseDetail = () => {
+export const ExpenseDetail = (handleUpdateExpense) => {
   const [expense, setExpense] = useState({ 
       budgetExpenseId: 0,
       name: "", 
@@ -49,10 +49,20 @@ export const ExpenseDetail = () => {
       <div className="expense_budgetExpenseId">{expense.budgetExpenseId?.name}</div>
       <div className="expense__description">Description: {expense.description}</div>
       <div className="expense__amount">Amount: $ {expense.amount}</div>
-      {/* <div className="expense__isPaid">is Paid: {expense.isPaid?.name}</div> */}
-      <button type="button" disabled={isLoading} onClick={handleDelete}>
+      <p> Is Expense Paid? {expense.isPaid? "Yes": "No"}</p> 
+
+      <label><input type="checkbox" onClick={() => handleUpdateExpense(expense.id)}>
+       </input> Paid Expense!</label><br/>
+
+
+       <Link  to={`/expense/${expense.id}/edit`} >
+                        <button class="button">Edit</button>
+                        </Link>
+<Link to={'/tasks'}>
+      <button class="button" disabled={isLoading} onClick={handleDelete}>
           Remove
         </button>
+        </Link>
     </section>
   );
 };

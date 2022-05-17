@@ -26,10 +26,11 @@ export const IncomeForm = () => {
 
 
     const navigate = useNavigate();
-    const newIncome = { ...income};
+  
     // navi gives ability to change URL
-    //constrolled component--what is in state
+    //controlled component--what is in state
     const handleControlledInputChange = (e) => {
+      const newIncome = { ...income};
         let selectedVal = e.target.value;
         if (e.target.id.includes("Id")) {
           selectedVal = parseInt(selectedVal)
@@ -37,24 +38,7 @@ export const IncomeForm = () => {
       newIncome[e.target.id] = selectedVal
         setIncome(newIncome)
       };
-    // const handleIncomeBudgetIdChange = (e) => {
-    //     newIncome.budgetId = e.target.value;
-    //     setIncome(newIncome);
-    //   };
-    // const handleIncomeDescriptionChange = (e) => {
-    //   newIncome.description = e.target.value;
-    //   setIncome(newIncome);
-    // };
-
-    // const handleIncomeAmountChange = (e) => {
-    //     newIncome.amount = e.target.value;
-    //     setIncome(newIncome);
-    //   };
-    //   const handleIncomeEventDateChange = (e) => {
-    //     newIncome.amount = e.target.value;
-    //     setIncome(newIncome);
-    //   };
-      
+  
 
     // load budgetIncome data and setState
     useEffect(() => {
@@ -71,7 +55,7 @@ export const IncomeForm = () => {
      window.alert("Please select a budget income type")
    } else {
 
-        addIncome(newIncome).then(() => navigate("/income"));
+        addIncome(income).then(() => navigate("/income"));
       };
 
    
@@ -85,18 +69,18 @@ export const IncomeForm = () => {
           <>
            <form className="incomeForm">
         <h3 className="incomeForm__title"><strong> Create New Income Form </strong></h3>
-        {/* <fieldset> */}
-          {/* <div className="form-group">
-            <label htmlFor="BudgetId"> BudgetId:</label>
+        {/* <fieldset> 
+           <div className="form-group">
+            <label htmlFor="budgetIncomeId"> budgetIncomeId:</label>
             <input
               type="text"
-              id="budgetId"
+              id="budgetIncomeId"
               onChange={handleControlledInputChange}
               required
               autoFocus
               className="form-control"
-              placeholder="Enter Budget Id"
-              value={income.budgetId}
+              placeholder="Enter Budget Income Id"
+              value={income.budgetIncomeId}
             />
           </div>
         </fieldset> */}
@@ -132,7 +116,7 @@ export const IncomeForm = () => {
         </fieldset>
         <fieldset>
         <div className="form-group">
-					<label htmlFor="location">Assign Income Budget Type: </label>
+					<label htmlFor="budgetIncomeId">Assign Income Budget Type: </label>
 					<select value={income.budgetIncomeId} name="budgetIncomeId" id="budgetIncomeId" onChange={handleControlledInputChange} className="form-control" >
 						<option value="0">Select an income budget type</option>
 						{budgetIncome.map(budgetIncome => (

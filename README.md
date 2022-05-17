@@ -7,7 +7,7 @@ AppForBudgetEase is designed for any User to create/monitor their income and exp
 HTML/CSS,
 Javascript,
 React,
-React minimal pie chart,
+React-minimal pie chart,
 JSON server,
 ERD using dbdiagram,
 Figma (wireframe),
@@ -21,9 +21,11 @@ Starting the webpage
 2. From inside the directory on your terminal, run npm install
 3. Register a name and email address
 4. Create your income and expense cards and lists
+5. Monitor relative amount of total expense, total income, and balance
 
 
-Author Info
+
 Created by Siprachanh Chanthaphaychith
 
-
+<img src="/images/AppForBudgetEase copy.png" alt="wireFrame">
+<img src="/images/AppForBudgetEase.png" alt="ERD">
